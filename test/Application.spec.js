@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import { assert, expect } from 'chai';
-import { uniqWith, isEqual, pick, map, extend } from 'lodash';
+import _, { uniqWith, isEqual, pick, map, extend } from 'lodash';
 import Application from '../lib/components/Application';
 import MessageList from '../lib/components/Application';
 import MessageInput from '../lib/components/Application';
@@ -116,15 +116,5 @@ describe('UserList', function() {
       expect(wrapper.find('.user-list-title')).to.have.length(1);
     })
 
-  })
-})
-
-describe('UserList', function() {
-  context('mount', function() {
-    const wrapper = mount(<UserList/>)
-      it('should have render a user-list element and a user-list-title element', function() {
-        expect(wrapper.find('.user-list')).to.have.length(1);
-        expect(wrapper.find('.user-list-title')).to.have.length(1);
-      })
   })
 })
